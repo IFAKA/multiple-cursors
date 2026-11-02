@@ -1,0 +1,27 @@
+{
+  "name": "multiple-cursors-chrome-extension",
+  "version": "1.0.0",
+  "description": "A Chrome extension that brings VSCode-style multiple cursor functionality to any webpage",
+  "main": "content.js",
+  "scripts": {
+    "test": "echo \"Open test.html in Chrome to test the extension\"",
+    "build": "echo \"No build process needed - extension is ready to load\""
+  },
+  "keywords": [
+    "chrome-extension",
+    "multiple-cursors",
+    "vscode",
+    "text-editing",
+    "productivity"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/multiple-cursors-chrome-extension"
+  },
+  "bugs": {
+    "url": "https://github.com/yourusername/multiple-cursors-chrome-extension/issues"
+  },
+  "homepage": "https://github.com/yourusername/multiple-cursors-chrome-extension#readme"
+}

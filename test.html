@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiple Cursors Test Page</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        
+        .test-section {
+            margin: 30px 0;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+        
+        .test-section h2 {
+            margin-top: 0;
+            color: #333;
+        }
+        
+        textarea {
+            width: 100%;
+            height: 100px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-family: monospace;
+        }
+        
+        .code-block {
+            background: #f5f5f5;
+            padding: 15px;
+            border-radius: 4px;
+            font-family: monospace;
+            white-space: pre-wrap;
+        }
+        
+        .instructions {
+            background: #e3f2fd;
+            padding: 15px;
+            border-radius: 4px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Multiple Cursors Extension Test Page</h1>
+    
+    <div class="instructions">
+        <h3>How to Test:</h3>
+        <ol>
+            <li>Click the extension icon and press <strong>"Enable Multiple Cursors"</strong></li>
+            <li>Select some text and press <strong>Ctrl+D</strong> to select next occurrences</li>
+            <li>Hold <strong>Alt</strong> and click to add cursors manually</li>
+            <li>Press <strong>Escape</strong> to clear all cursors</li>
+        </ol>
+    </div>
+    
+    <div class="test-section">
+        <h2>Regular Text</h2>
+        <p>This is a paragraph with some text. You can select words like "text" and use Ctrl+D to select all occurrences. Try selecting the word "text" and pressing Ctrl+D multiple times.</p>
+        <p>Here's another paragraph with more text content. The word "text" appears again here. You can also try selecting "paragraph" and see how it works.</p>
+    </div>
+    
+    <div class="test-section">
+        <h2>Code Block</h2>
+        <div class="code-block">function hello() {
+    console.log("Hello World");
+    console.log("Hello Universe");
+    console.log("Hello Galaxy");
+}
+
+const message = "Hello";
+const greeting = "Hello";
+const salutation = "Hello";</div>
+    </div>
+    
+    <div class="test-section">
+        <h2>Editable Text Area</h2>
+        <textarea placeholder="Type something here... You can use multiple cursors in this textarea too!">This is a textarea with some sample text. You can edit this content using multiple cursors. Try selecting "text" and pressing Ctrl+D.</textarea>
+    </div>
+    
+    <div class="test-section">
+        <h2>List Items</h2>
+        <ul>
+            <li>First item with some text</li>
+            <li>Second item with more text</li>
+            <li>Third item with additional text</li>
+            <li>Fourth item with even more text</li>
+        </ul>
+    </div>
+    
+    <div class="test-section">
+        <h2>Form Fields</h2>
+        <input type="text" value="This is an input field" style="width: 100%; padding: 8px; margin-bottom: 10px;">
+        <input type="text" value="Another input field" style="width: 100%; padding: 8px;">
+    </div>
+    
+    <div class="test-section">
+        <h2>Mixed Content</h2>
+        <p>This section has <strong>bold text</strong> and <em>italic text</em> and <code>inline code</code>.</p>
+        <p>You can select across different elements and see how the extension handles it.</p>
+    </div>
+</body>
+</html>

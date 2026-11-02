@@ -1,0 +1,11 @@
+<svg width="128" height="128" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
+  <rect width="128" height="128" fill="#007acc" rx="20"/>
+  <g fill="white">
+    <!-- Main cursor -->
+    <path d="M20 20 L20 100 L30 90 L30 30 L20 20 Z"/>
+    <!-- Second cursor -->
+    <path d="M40 40 L40 120 L50 110 L50 50 L40 40 Z"/>
+    <!-- Third cursor -->
+    <path d="M60 30 L60 110 L70 100 L70 40 L60 30 Z"/>
+  </g>
+</svg>

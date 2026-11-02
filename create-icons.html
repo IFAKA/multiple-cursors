@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Icon Generator</title>
+</head>
+<body>
+    <canvas id="canvas16" width="16" height="16"></canvas>
+    <canvas id="canvas48" width="48" height="48"></canvas>
+    <canvas id="canvas128" width="128" height="128"></canvas>
+    
+    <script>
+        function createIcon(canvasId, size) {
+            const canvas = document.getElementById(canvasId);
+            const ctx = canvas.getContext('2d');
+            
+            // Background
+            ctx.fillStyle = '#007acc';
+            ctx.fillRect(0, 0, size, size);
+            
+            // Cursors
+            ctx.fillStyle = 'white';
+            const cursorWidth = size * 0.1;
+            const cursorHeight = size * 0.6;
+            
+            // First cursor
+            ctx.beginPath();
+            ctx.moveTo(size * 0.15, size * 0.15);
+            ctx.lineTo(size * 0.15, size * 0.15 + cursorHeight);
+            ctx.lineTo(size * 0.15 + cursorWidth, size * 0.15 + cursorHeight - cursorWidth);
+            ctx.lineTo(size * 0.15 + cursorWidth, size * 0.15 + cursorWidth);
+            ctx.closePath();
+            ctx.fill();
+            
+            // Second cursor
+            ctx.beginPath();
+            ctx.moveTo(size * 0.35, size * 0.3);
+            ctx.lineTo(size * 0.35, size * 0.3 + cursorHeight);
+            ctx.lineTo(size * 0.35 + cursorWidth, size * 0.3 + cursorHeight - cursorWidth);
+            ctx.lineTo(size * 0.35 + cursorWidth, size * 0.3 + cursorWidth);
+            ctx.closePath();
+            ctx.fill();
+            
+            // Third cursor
+            ctx.beginPath();
+            ctx.moveTo(size * 0.55, size * 0.2);
+            ctx.lineTo(size * 0.55, size * 0.2 + cursorHeight);
+            ctx.lineTo(size * 0.55 + cursorWidth, size * 0.2 + cursorHeight - cursorWidth);
+            ctx.lineTo(size * 0.55 + cursorWidth, size * 0.2 + cursorWidth);
+            ctx.closePath();
+            ctx.fill();
+        }
+        
+        createIcon('canvas16', 16);
+        createIcon('canvas48', 48);
+        createIcon('canvas128', 128);
+        
+        // Download functions
+        function downloadCanvas(canvasId, filename) {
+            const canvas = document.getElementById(canvasId);
+            const link = document.createElement('a');
+            link.download = filename;
+            link.href = canvas.toDataURL();
+            link.click();
+        }
+        
+        // Add download buttons
+        setTimeout(() => {
+            downloadCanvas('canvas16', 'icon16.png');
+            downloadCanvas('canvas48', 'icon48.png');
+            downloadCanvas('canvas128', 'icon128.png');
+        }, 1000);
+    </script>
+</body>
+</html>
